@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('./Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Belleza';
+    src: url('./Belleza/Belleza-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('./Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
+}
