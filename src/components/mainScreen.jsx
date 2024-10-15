@@ -28,7 +28,7 @@ const MainScreen = ({ children }) => {
     ) : (
     <div className="min-h-screen relative overflow-hidden">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg z-10">
+      <nav className="fixed top-0 left-0 right-0 bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0 cursor-pointer">
@@ -61,7 +61,7 @@ const MainScreen = ({ children }) => {
 
         {/* Mobile Menu (shows when hamburger menu is open) */}
         {isMenuOpen && (
-          <div className="md:hidden z-10 font-SpaceMono">
+          <div className="md:hidden z-50font-SpaceMono">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link to='/teckStack' className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium cursor-pointer">Teck Stack</Link>
               <Link to="/projects" className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium cursor-pointer">Projects</Link>
@@ -74,7 +74,7 @@ const MainScreen = ({ children }) => {
 
       {/* Main content */}
       <WavyBackground>
-      <main className="relative pt-16 flex items-center justify-center min-h-screen font-SpaceMono">
+      <main className="pt-16 flex justify-center h-[100vh] font-SpaceMono z-0">
         {children}
       </main>
       </WavyBackground>
