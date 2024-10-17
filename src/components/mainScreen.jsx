@@ -26,7 +26,7 @@ const MainScreen = ({ children }) => {
     <> {loading ? (
       <Loading />
     ) : (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -74,7 +74,7 @@ const MainScreen = ({ children }) => {
 
       {/* Main content */}
       <WavyBackground>
-      <main className="pt-16 flex justify-center h-[100vh] font-SpaceMono z-0">
+      <main className="pt-16 flex justify-center h-[100vh] font-SpaceMono z-0 text-white">
         {children}
       </main>
       </WavyBackground>

@@ -9,7 +9,7 @@ export const WavyBackground = ({
   colors,
   waveWidth,
   backgroundFill,
-  blur = 15,
+  blur = 14,
   speed = "fast",
   waveOpacity = 0.5,
   ...props

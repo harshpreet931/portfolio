@@ -1,13 +1,12 @@
 import React from 'react';
 import SocialLinks from '../socialLinks/socialLinks';
-import Loading from '../loading/loading';
 
 const Home = () => {
     return (
         <>
         <div className=" text-white flex flex-col justify-center items-center">
             <h1 className="text-6xl mb-4 font-Caveat font-thin tracking-tight">Harshpreet Singh</h1>
-            <h2 className="text-2xl mb-6">Web Developer & Designer & AI/ML Enthusiast</h2>
+            <h2 className="text-2xl mb-6 text-center">Web Developer & Designer & AI/ML Enthusiast</h2>
             
             <p className="text-center max-w-md mb-8">
                 I'm passionate about Problem-Solving, Web Development and Designing. I love to learn and explore new technologies. Always ready for new challenges 💪.
