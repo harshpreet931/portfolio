@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialLinks from '../socialLinks/socialLinks';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -14,10 +15,10 @@ const Home = () => {
             
             <div className="flex space-x-4 mb-8">
                 <button className="bg-blue-600 bg-opacity-20 backdrop-blur-md border border-blue-500 hover:bg-opacity-40 px-4 py-2 rounded">
-                    View Projects
+                    <Link to="/projects">View Projects</Link>
                 </button>
                 <button className="bg-green-600 bg-opacity-20 backdrop-blur-md border border-green-500 hover:bg-opacity-40 px-4 py-2 rounded">
-                    View Resume
+                    <Link to="/contact">Contact</Link>
                 </button>
             </div>
 
