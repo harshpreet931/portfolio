@@ -27,7 +27,7 @@ const MainScreen = ({ children }) => {
     {loading ? (
       <Loading /> ) : 
     (
-    <div className="relative overflow-hidden">
+    <div className="absolute w-[100vw] overflow-hidden">
       {/* Navbar */}
       <WavyBackground>
       <nav className="fixed top-0 left-0 right-0 bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg z-50">
