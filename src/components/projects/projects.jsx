@@ -76,6 +76,7 @@ const Projects = () => {
                 ))}
               </div>
             </div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
           </div>
         ))}
       </div>
