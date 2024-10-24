@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { WavyBackground } from './ui/wavy-background';
 import Loading from './loading/loading';
 
 const MainScreen = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  const [activeTabWidth, setActiveTabWidth] = useState(0);
+  const [activeTabLeft, setActiveTabLeft] = useState(0);
+  const tabsRef = useRef(new Map());
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,14 +29,50 @@ const MainScreen = ({ children }) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setActiveTabWidth(0);
+      setActiveTabLeft(0);
+      return;
+    }
+
+    const activeTab = tabsRef.current.get(location.pathname);
+    if (activeTab) {
+      const { offsetWidth, offsetLeft } = activeTab;
+      setActiveTabWidth(offsetWidth);
+      setActiveTabLeft(offsetLeft);
+    }
+  }, [location.pathname]);
+
+  const isActiveLink = (path) => {
+    if (location.pathname === '/') return false;
+    return location.pathname === path;
+  };
+
+  const getLinkClass = (path) => {
+    const baseClasses = "px-3 py-2 rounded-md text-base font-medium relative inline-block";
+    return `${baseClasses} ${
+      isActiveLink(path)
+        ? "text-white"
+        : "text-white/80 hover:text-white transition-colors duration-300"
+    }`;
+  };
+
+  const navLinks = [
+    { path: '/teckStack', label: 'Teck Stack' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' }
+  ];
+
+  const showIndicator = location.pathname !== '/';
+
   return (
     <> 
-    
     {loading ? (
-      <Loading /> ) : 
-    (
+      <Loading />
+    ) : (
     <div className="absolute w-[100vw] overflow-hidden">
-      {/* Navbar */}
       <WavyBackground>
       <nav className="fixed top-0 left-0 right-0 bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -43,11 +83,28 @@ const MainScreen = ({ children }) => {
 
             {/* Desktop Menu */}
             <div className="font-SpaceMono hidden md:block z-50">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link to='/teckStack' className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium">Teck Stack</Link>
-                <Link to="/projects" className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium">Projects</Link>
-                <Link to="/about" className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium">About</Link>
-                <Link to="/contact" className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+              <div className="ml-10 flex items-baseline space-x-4 relative">
+                {showIndicator && (
+                  <div
+                    className="absolute bottom-0 h-[2px] bg-white transition-all duration-300 ease-in-out rounded-full"
+                    style={{
+                      width: `${activeTabWidth}px`,
+                      left: `${activeTabLeft}px`,
+                      transform: 'translateY(8px)'
+                    }}
+                  />
+                )}
+
+                {navLinks.map(({ path, label }) => (
+                  <Link
+                    key={path}
+                    to={path}
+                    ref={el => tabsRef.current.set(path, el)}
+                    className={getLinkClass(path)}
+                  >
+                    {label}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -67,12 +124,20 @@ const MainScreen = ({ children }) => {
 
         {/* Mobile Menu (shows when hamburger menu is open) */}
         {isMenuOpen && (
-          <div className="md:hidden z-50font-SpaceMono">
+          <div className="md:hidden z-50 font-SpaceMono">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to='/teckStack' onClick={handleMenuClick} className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Teck Stack</Link>
-              <Link to="/projects"  onClick={handleMenuClick} className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Projects</Link>
-              <Link to="/about"     onClick={handleMenuClick} className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">About</Link>
-              <Link to="/contact"   onClick={handleMenuClick} className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+              {navLinks.map(({ path, label }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  onClick={handleMenuClick}
+                  className={`${getLinkClass(path)} block w-full ${
+                    isActiveLink(path) ? 'bg-white/10' : ''
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
         )}
@@ -82,7 +147,7 @@ const MainScreen = ({ children }) => {
       </main>
       </WavyBackground>
     </div>
-    )};
+    )}
     </>
   );
 };
