@@ -56,7 +56,7 @@ const TechStack = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {category.items.map((tech, subIndex) => (
               <div key={subIndex} className="group relative overflow-hidden rounded-2xl w-full max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md transition-all duration-300 group-hover:backdrop-blur-xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg transition-all duration-300 group-hover:backdrop-blur-2xl" />
                 <div className="relative p-6 flex flex-col h-full transition-all duration-300 group-hover:scale-105">
                   <div className="mb-4 flex items-center">
                     <span className="text-4xl mr-3 transition-all duration-300 group-hover:scale-110">{tech.icon}</span>

@@ -44,7 +44,7 @@ const Projects = () => {
       <h1 className="text-4xl font-bold text-center mb-12 text-white">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
+          <div key={index} className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
             <div className="relative">
               <img 
                 src={project.image} 
