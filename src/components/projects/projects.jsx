@@ -2,6 +2,13 @@ import React from 'react';
 
 const projects = [
   {
+    title: "Markd",
+    github: "https://github.com/harshpreet931/Markd",
+    image: "/markd.png",
+    description: "A modern content-sharing platform that enables users to create, share, and discover articles on various topics. It offers a seamless user experience with features like real-time updates, user authentication, article management, and social interactions such as upvoting and downvoting.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Tailwind"]
+  },
+  {
     title: "Spam Classification in C",
     github: "https://github.com/harshpreet931/Spam-Email-Classification",
     image: "/spamEmail.png",
