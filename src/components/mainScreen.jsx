@@ -59,7 +59,7 @@ const MainScreen = ({ children }) => {
   };
 
   const navLinks = [
-    { path: '/teckStack', label: 'Teck Stack' },
+    { path: '/techstack', label: 'Tech Stack' },
     { path: '/projects', label: 'Projects' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' }

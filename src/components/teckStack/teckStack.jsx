@@ -1,5 +1,6 @@
 import React from 'react';
 import './techStack.css';
+import SEOMetaTags from '../SEOMetaTags';
 
 const techStack = [
   {
@@ -46,6 +47,13 @@ const techStack = [
 
 const TechStack = () => {
   return (
+    <>
+      <SEOMetaTags 
+        title="Tech Stack - Harshpreet Singh | Skills & Technologies"
+        description="Explore Harshpreet Singh's technical expertise: React, Node.js, Python, Java, C++, Machine Learning libraries, and modern development tools. Full stack development skills."
+        keywords="Harshpreet Singh skills, React developer, Node.js expert, Python programming, Java, C++, machine learning, scikit-learn, pandas, tech stack, programming languages"
+        image="/techstack-og.png"
+      />
     <div className="container flex flex-col p-8 overflow-y-auto hide-scrollbar">
       {techStack.map((category, index) => (
         <div key={index} className="w-full mb-12">
@@ -71,6 +79,7 @@ const TechStack = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

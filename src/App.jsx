@@ -15,7 +15,7 @@ function App() {
       <MainScreen>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/teckStack" element={<TechStack />} />
+          <Route path="/techstack" element={<TechStack />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

@@ -1,12 +1,20 @@
 import React from 'react';
+import SEOMetaTags from '../SEOMetaTags';
 
 const About = () => {
   return (
+    <>
+      <SEOMetaTags 
+        title="About - Harshpreet Singh | Computer Science Student & Developer"
+        description="Learn about Harshpreet Singh: Computer Science student at Chitkara University, internship at Semi-Conductor Laboratory, 1800+ LeetCode rating, Star Programmer. Passionate about software development and ML."
+        keywords="Harshpreet Singh about, Computer Science student, Chitkara University, Semi-Conductor Laboratory, LeetCode, Star Programmer, software development, machine learning"
+        image="/about-og.png"
+      />
     <div className="container mx-auto px-4 max-w-5xl overflow-y-auto hide-scrollbar">
       <div className="mb-8">
         <img
           src="/harsh.jpg"
-          alt="Profile"
+          alt="Harshpreet Singh - Computer Science Student and Full Stack Developer"
           className="w-full h-64 object-cover rounded-lg shadow-lg"
         />
       </div>
@@ -45,6 +53,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

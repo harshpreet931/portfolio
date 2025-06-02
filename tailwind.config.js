@@ -1,12 +1,9 @@
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class",
-  plugins: [addVariablesForColors],
   theme: {
     extend: {
       fontFamily: {
@@ -25,7 +22,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 }
 
 function addVariablesForColors({ addBase, theme }) {

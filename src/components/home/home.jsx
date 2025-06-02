@@ -2,12 +2,19 @@ import React from 'react';
 import SocialLinks from '../socialLinks/socialLinks';
 import { Link } from 'react-router-dom';
 import { FlipWords } from '../ui/flip-words';
+import SEOMetaTags from '../SEOMetaTags';
 
 const Home = () => {
     const words = ["Web Developer", "Designer", "AI/ML Enthusiast", "Problem-Solver"];
 
     return (
         <>
+            <SEOMetaTags 
+                title="Harshpreet Singh - Full Stack Developer | React, Node.js, AI/ML Expert"
+                description="Passionate Full Stack Developer specializing in React, Node.js, Python, and AI/ML. Creating innovative web solutions with modern technologies. View my portfolio of 10+ projects."
+                keywords="Harshpreet Singh, Full Stack Developer, React Developer, Node.js, Python, AI/ML, Web Developer, JavaScript, Portfolio, Software Engineer"
+                image="/og-image.png"
+            />
         <div className=" text-white flex flex-col justify-center items-center">
             <h1 className="text-6xl mb-4 font-Caveat font-thin tracking-tight">Harshpreet Singh</h1>
             <h2 className="text-2xl mb-6 text-center text-white"><FlipWords words={words} /></h2>

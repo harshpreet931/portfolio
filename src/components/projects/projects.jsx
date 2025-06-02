@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOMetaTags from '../SEOMetaTags';
 
 const projects = [
   {
@@ -47,6 +48,13 @@ const projects = [
 
 const Projects = () => {
   return (
+    <>
+      <SEOMetaTags 
+        title="Projects - Harshpreet Singh | Full Stack Development Portfolio"
+        description="Explore 10+ innovative projects by Harshpreet Singh including Markd (MERN Stack), Machine Learning projects, and web applications. Technologies: React, Node.js, Python, MongoDB, AI/ML."
+        keywords="Harshpreet Singh projects, React projects, Node.js applications, Python machine learning, MERN stack, web development portfolio, full stack projects"
+        image="/projects-og.png"
+      />
     <div className="container p-2 overflow-y-auto hide-scrollbar">
       <h1 className="text-4xl font-bold text-center mb-12 text-white">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -88,6 +96,7 @@ const Projects = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

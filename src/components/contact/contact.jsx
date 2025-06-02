@@ -1,7 +1,15 @@
 import React from 'react';
+import SEOMetaTags from '../SEOMetaTags';
 
 const Contact = () => {
   return (
+    <>
+      <SEOMetaTags 
+        title="Contact - Harshpreet Singh | Get In Touch"
+        description="Contact Harshpreet Singh for collaboration opportunities, projects, or inquiries. Connect via GitHub, LinkedIn, Medium, or email. Available for freelance and full-time opportunities."
+        keywords="Contact Harshpreet Singh, hire developer, collaboration, freelance developer, full stack developer contact, GitHub, LinkedIn"
+        image="/contact-og.png"
+      />
     <div className="flex items-center max-w-sm p-4">
       <div className="w-full">
         <h1 className="text-4xl font-extrabold mb-8 text-center font-SpaceMono text-white">
@@ -17,6 +25,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
