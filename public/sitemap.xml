@@ -1,42 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
+  <!-- Home Page -->
   <url>
-    <loc>https://harshpreetsingh.dev/</loc>
-    <lastmod>2025-06-02</lastmod>
+    <loc>https://harshpreetsingh.vercel.app/</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/harsh.jpg</image:loc>
+      <image:title>Harshpreet Singh - Full Stack Developer</image:title>
+      <image:caption>Portfolio homepage showcasing Harshpreet Singh's work as a Full Stack Developer specializing in React, Node.js, Python, and AI/ML</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/og-image.png</image:loc>
+      <image:title>Harshpreet Singh Portfolio - Social Media Preview</image:title>
+    </image:image>
   </url>
   
+  <!-- About Page -->
   <url>
-    <loc>https://harshpreetsingh.dev/about</loc>
-    <lastmod>2025-06-02</lastmod>
+    <loc>https://harshpreetsingh.vercel.app/about</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/harsh.jpg</image:loc>
+      <image:title>Harshpreet Singh - Computer Science Student at Chitkara University</image:title>
+      <image:caption>About Harshpreet Singh: Computer Science student, Star Programmer, 1800+ LeetCode rating, SCL intern</image:caption>
+    </image:image>
   </url>
   
+  <!-- Projects Page -->
   <url>
-    <loc>https://harshpreetsingh.dev/projects</loc>
-    <lastmod>2025-06-02</lastmod>
+    <loc>https://harshpreetsingh.vercel.app/projects</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/markd.png</image:loc>
+      <image:title>Markd - MERN Stack Content Sharing Platform</image:title>
+      <image:caption>Modern content-sharing platform built with MongoDB, Express.js, React, Node.js</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/letshelp.png</image:loc>
+      <image:title>Let's Help Everyone - Educational Platform with 10k+ Views</image:title>
+      <image:caption>Comprehensive solution for CSE Students with study materials, built with Next.js and Firebase</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/innerecho.png</image:loc>
+      <image:title>Inner Echo - ML Depression Analysis with 99.6% Accuracy</image:title>
+      <image:caption>Machine Learning project for depression analysis using Python, Flask, and Scikit-learn</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/spamEmail.png</image:loc>
+      <image:title>Spam Email Classification in C - Naive Bayes Implementation</image:title>
+      <image:caption>Lightweight spam email classifier implemented in C using Naive Bayes algorithm</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/flashify.png</image:loc>
+      <image:title>Flashify - Interactive Learning Flashcards Application</image:title>
+      <image:caption>Responsive web application for interactive learning through flashcards</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://harshpreetsingh.vercel.app/knowthyshelf.png</image:loc>
+      <image:title>Know Thy Shelf - Book Reading and Publishing Platform</image:title>
+      <image:caption>React and Firebase-based platform for reading and publishing books</image:caption>
+    </image:image>
   </url>
   
+  <!-- Tech Stack Page -->
   <url>
-    <loc>https://harshpreetsingh.dev/techstack</loc>
-    <lastmod>2025-06-02</lastmod>
+    <loc>https://harshpreetsingh.vercel.app/techstack</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
+  <!-- Contact Page -->
   <url>
-    <loc>https://harshpreetsingh.dev/contact</loc>
-    <lastmod>2025-06-02</lastmod>
+    <loc>https://harshpreetsingh.vercel.app/contact</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Individual Project Deep Links (for better indexing) -->
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/projects#markd</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/projects#letshelp</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/projects#innerecho</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Skills and Technology Pages (if they exist as separate routes) -->
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/skills/react</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/skills/nodejs</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/skills/python</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://harshpreetsingh.vercel.app/skills/machine-learning</loc>
+    <lastmod>2025-06-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
   
 </urlset>

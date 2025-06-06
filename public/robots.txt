@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://harshpreetsingh.dev/sitemap.xml
+Sitemap: https://harshpreetsingh.vercel.app/sitemap.xml
 
 # Crawl delay (optional - adjust based on your server capacity)
 Crawl-delay: 1
