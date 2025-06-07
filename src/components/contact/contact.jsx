@@ -2,14 +2,11 @@ import React from 'react';
 import SEOMetaTags from '../SEOMetaTags';
 
 const Contact = () => {
-  // Contact information for structured data
   const contactInfo = {
     name: "Harshpreet Singh",
-    email: "harshpreet393.be22@chitkara.edu.in",
-    telephone: "+91-XXX-XXX-XXXX", // You can add actual number
     url: "https://harshpreetsingh.vercel.app",
     address: {
-      addressLocality: "Punjab",
+      addressLocality: "Bengaluru, Karnataka",
       addressCountry: "IN"
     },
     availabilityHours: "Mon-Fri 9:00-18:00 IST",
@@ -22,28 +19,24 @@ const Contact = () => {
       url: "https://github.com/harshpreet931",
       icon: "fab fa-github",
       handle: "@harshpreet931",
-      description: "View my open source projects and code repositories"
     },
     {
       platform: "LinkedIn", 
       url: "https://www.linkedin.com/in/harshpreet931/",
       icon: "fab fa-linkedin",
       handle: "harshpreet931",
-      description: "Connect with me professionally on LinkedIn"
     },
     {
       platform: "Medium",
       url: "https://medium.com/@harshpreet0402", 
       icon: "fab fa-medium",
       handle: "@harshpreet0402",
-      description: "Read my technical articles and blog posts"
     },
     {
       platform: "Email",
       url: "mailto:harshpreet393.be22@chitkara.edu.in",
       icon: "fas fa-envelope", 
       handle: "harshpreet393.be22@chitkara.edu.in",
-      description: "Send me an email for business inquiries"
     }
   ];
 
@@ -77,7 +70,7 @@ const Contact = () => {
       "telephone": contactInfo.telephone,
       "contactType": "Business",
       "email": contactInfo.email,
-      "availableLanguage": ["English", "Hindi", "Punjabi"],
+      "availableLanguage": ["English", "Hindi", "Basic French", "Basic German"],
       "hoursAvailable": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -110,7 +103,7 @@ const Contact = () => {
       <SEOMetaTags 
         title="Contact Harshpreet Singh | Full Stack Developer - Hire Me"
         description="Contact Harshpreet Singh for web development projects, mobile apps, and software consulting. Available for freelance work and full-time opportunities. Quick 24-hour response time."
-        keywords="contact Harshpreet Singh, hire full stack developer, web development services, mobile app developer, freelance developer Punjab India, software consultant contact"
+        keywords="contact Harshpreet Singh, hire full stack developer, web development services, mobile app developer, freelance developer Bengaluru India, software consultant contact"
         image="/contact-og.png"
         url="https://harshpreetsingh.vercel.app/contact"
         type="profile"
@@ -129,26 +122,25 @@ const Contact = () => {
         }}
       />
 
-      <article className="flex items-center max-w-sm p-4" itemScope itemType="https://schema.org/ContactPage">
-        <div className="w-full">
+      <article className="flex flex-col items-center py-12 px-4 md:px-8" itemScope itemType="https://schema.org/ContactPage">
+        <div className="w-full max-w-2xl">
           <header>
             <h1 
               className="text-4xl font-extrabold mb-8 text-center font-SpaceMono text-white"
               itemProp="headline"
             >
-              Contact Me 📞
+              Contact Me
             </h1>
             <div className="text-center mb-6">
               <p 
                 className="text-gray-300 text-lg mb-2"
                 itemProp="description"
               >
-                Let's collaborate on your next project! 🚀
+                Let's collaborate on your next project!
               </p>
               <div className="text-sm text-gray-400" itemProp="about">
                 <p>⚡ Quick response within {contactInfo.responseTime}</p>
-                <p>🌍 Available worldwide for remote work</p>
-                <p>💼 Open to freelance & full-time opportunities</p>
+                <p>Open to freelance.</p>
               </div>
             </div>
           </header>
@@ -159,7 +151,7 @@ const Contact = () => {
             itemType="https://schema.org/ContactPoint"
           >
             <h2 className="text-xl font-bold text-white mb-6 text-center">
-              🔗 Connect With Me
+              Connect With Me
             </h2>
             
             {/* Contact Methods */}
@@ -183,20 +175,17 @@ const Contact = () => {
               itemType="https://schema.org/Person"
             >
               <h3 className="text-lg font-semibold text-white mb-4">
-                📍 Contact Information
+                Contact Information
               </h3>
               <div className="space-y-2 text-gray-300">
-                <p itemProp="email">
-                  <span className="font-medium">📧 Email:</span> {contactInfo.email}
-                </p>
                 <p itemProp="addressLocality">
-                  <span className="font-medium">📍 Location:</span> {contactInfo.address.addressLocality}, India
+                  <span className="font-medium">Location:</span> {contactInfo.address.addressLocality}, India
                 </p>
                 <p>
-                  <span className="font-medium">🕐 Availability:</span> {contactInfo.availabilityHours}
+                  <span className="font-medium">Availability:</span> {contactInfo.availabilityHours}
                 </p>
                 <p>
-                  <span className="font-medium">💬 Languages:</span> English, Hindi, Punjabi
+                  <span className="font-medium">Languages:</span> English, Hindi, Basic French, Basic German
                 </p>
               </div>
             </div>
@@ -209,7 +198,7 @@ const Contact = () => {
                 itemProp="url"
                 aria-label="Send email to Harshpreet Singh"
               >
-                💌 Send Project Inquiry
+               Send Project Inquiry
               </a>
             </div>
           </section>
@@ -252,7 +241,7 @@ const Contact = () => {
                 </h3>
                 <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
                   <p className="text-gray-300 text-sm" itemProp="text">
-                    I specialize in web applications, mobile apps, and full-stack development projects using modern technologies like React, Node.js, and cloud platforms.
+                    I specialize in web applications, and full-stack development projects using modern technologies like React, Node.js, and cloud platforms. As well I can teach you! DSA, CN, OS, DBMS, OOPs, and more.
                   </p>
                 </div>
               </div>
