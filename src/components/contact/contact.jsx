@@ -4,6 +4,7 @@ import SEOMetaTags from '../SEOMetaTags';
 const Contact = () => {
   const contactInfo = {
     name: "Harshpreet Singh",
+    email: "harshpreet393.be22@chitkara.edu.in",
     url: "https://harshpreetsingh.vercel.app",
     address: {
       addressLocality: "Bengaluru, Karnataka",
@@ -122,11 +123,11 @@ const Contact = () => {
         }}
       />
 
-      <article className="flex flex-col items-center py-12 px-4 md:px-8" itemScope itemType="https://schema.org/ContactPage">
-        <div className="w-full max-w-2xl">
+      <article className="flex flex-col items-center py-12 px-4 md:px-8 no-scrollbar h-screen overflow-y-auto" itemScope itemType="https://schema.org/ContactPage">
+        <div className="w-full max-w-3xl">
           <header>
             <h1 
-              className="text-4xl font-extrabold mb-8 text-center font-SpaceMono text-white"
+              className="text-4xl font-extrabold mb-8 text-center text-white"
               itemProp="headline"
             >
               Contact Me

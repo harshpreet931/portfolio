@@ -72,7 +72,7 @@ const MainScreen = ({ children }) => {
     {loading ? (
       <Loading />
     ) : (
-    <div className="absolute w-[100vw] overflow-hidden">
+    <div className="absolute w-full">
       <WavyBackground>
       <nav className="fixed top-0 left-0 right-0 bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -82,7 +82,7 @@ const MainScreen = ({ children }) => {
             </div>
 
             {/* Desktop Menu */}
-            <div className="font-SpaceMono hidden md:block z-50">
+            <div className="hidden md:block z-50">
               <div className="ml-10 flex items-baseline space-x-4 relative">
                 {showIndicator && (
                   <div
@@ -109,7 +109,7 @@ const MainScreen = ({ children }) => {
             </div>
 
             {/* Mobile Hamburger Menu */}
-            <div className="md:hidden font-SpaceMono z-10">
+            <div className="md:hidden z-10">
               <button
                 onClick={handleMenuToggle}
                 className="text-white hover:bg-white hover:bg-opacity-20 p-2 rounded-md"
@@ -124,7 +124,7 @@ const MainScreen = ({ children }) => {
 
         {/* Mobile Menu (shows when hamburger menu is open) */}
         {isMenuOpen && (
-          <div className="md:hidden z-50 font-SpaceMono">
+          <div className="md:hidden z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map(({ path, label }) => (
                 <Link
@@ -142,7 +142,7 @@ const MainScreen = ({ children }) => {
           </div>
         )}
       </nav>
-      <main className="pt-16 flex justify-center h-[100vh] font-SpaceMono z-0 text-white">
+      <main className="pt-16 flex justify-center h-[100vh] overflow-y-auto z-0 text-white">
         {children}
       </main>
       </WavyBackground>

@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <>
-            <SEOMetaTags 
+        <SEOMetaTags 
                 title="Harshpreet Singh - Full Stack Developer | React, Node.js, AI/ML Expert"
                 description="Passionate Full Stack Developer specializing in React, Node.js, Python, and AI/ML. Creating innovative web solutions with modern technologies. View my portfolio of 10+ projects."
                 keywords="Harshpreet Singh, Full Stack Developer, React Developer, Node.js, Python, AI/ML, Web Developer, JavaScript, Portfolio, Software Engineer"

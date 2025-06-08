@@ -27,4 +27,14 @@ body {
 * {
     scrollbar-width: thin;
     scrollbar-color: #a9a9a9 black; 
-}  
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
